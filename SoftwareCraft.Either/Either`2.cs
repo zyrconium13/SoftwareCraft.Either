@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace SoftwareCraft.Either
+namespace SoftwareCraft.Functional
 {
 	public abstract class Either<TLeft, TRight>
 	{

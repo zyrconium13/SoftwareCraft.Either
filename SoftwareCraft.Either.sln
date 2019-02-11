@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftwareCraft.Either", "SoftwareCraft.Either\SoftwareCraft.Either.csproj", "{86A273B0-7290-4CE1-8ABC-1A85E11F8D3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SoftwareCraft.Either", "SoftwareCraft.Either\SoftwareCraft.Either.csproj", "{86A273B0-7290-4CE1-8ABC-1A85E11F8D3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,5 +21,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FD0ECDA6-B302-4D67-8FD2-68A90D7E14E3}
+	EndGlobalSection
+	GlobalSection(NDepend) = preSolution
+		Project = ".\SoftwareCraft.Either1.ndproj"
 	EndGlobalSection
 EndGlobal

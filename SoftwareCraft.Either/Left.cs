@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace SoftwareCraft.Either
+namespace SoftwareCraft.Functional
 {
 	public class Left<TLeft, TRight> : Either<TLeft, TRight>
 	{
@@ -9,19 +9,38 @@ namespace SoftwareCraft.Either
 
 		public override void Match(Action<TLeft> onLeft, Action<TRight> onRight)
 		{
+			if (onLeft == null) throw new ArgumentNullException(nameof(onLeft));
+			if (onRight == null) throw new ArgumentNullException(nameof(onRight));
+
 			onLeft(Left);
 		}
 
-		public override TOut Match<TOut>(Func<TLeft, TOut> onLeft, Func<TRight, TOut> onRight) => onLeft(Left);
+		public override TOut Match<TOut>(Func<TLeft, TOut> onLeft, Func<TRight, TOut> onRight)
+		{
+			if (onLeft == null) throw new ArgumentNullException(nameof(onLeft));
+			if (onRight == null) throw new ArgumentNullException(nameof(onRight));
+
+			return onLeft(Left);
+		}
 
 		public override Either<ULeft, URight> Select<ULeft, URight>(
 			Func<TLeft, ULeft> mapLeft,
-			Func<TRight, URight> mapRight) =>
-			Either.Left<ULeft, URight>(mapLeft(Left));
+			Func<TRight, URight> mapRight)
+		{
+			if (mapLeft == null) throw new ArgumentNullException(nameof(mapLeft));
+			if (mapRight == null) throw new ArgumentNullException(nameof(mapRight));
+
+			return Either.Left<ULeft, URight>(mapLeft(Left));
+		}
 
 		public override Either<ULeft, URight> SelectMany<ULeft, URight>(
 			Func<TLeft, Either<ULeft, URight>> mapLeft,
-			Func<TRight, Either<ULeft, URight>> mapRight) =>
-			mapLeft(Left);
+			Func<TRight, Either<ULeft, URight>> mapRight)
+		{
+			if (mapLeft == null) throw new ArgumentNullException(nameof(mapLeft));
+			if (mapRight == null) throw new ArgumentNullException(nameof(mapRight));
+
+			return mapLeft(Left);
+		}
 	}
 }
