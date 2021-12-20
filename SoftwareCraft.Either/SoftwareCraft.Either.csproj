@@ -1,20 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Authors>SoftwareCraft</Authors>
-    <Company>SoftwareCraft</Company>
-    <Product>SoftwareCraft.Either</Product>
-    <Description>SoftwareCraft.Either represents the OOP implementation of a functional concept. You can return two disjoined types instead of just one.</Description>
-    <PackageProjectUrl>https://github.com/zyrconium13/SoftwareCraft.Either</PackageProjectUrl>
     <RootNamespace>SoftwareCraft.Functional</RootNamespace>
     <AssemblyName>SoftwareCraft.Either</AssemblyName>
-    <Version>2.1.0.0</Version>
-    <PackageReleaseNotes>Compiled for .NET Standard 2.1</PackageReleaseNotes>
-    <PackageTags>either c-sharp functional-programming dotnetcore dotnetstandard</PackageTags>
-    <SignAssembly>false</SignAssembly>
     <LangVersion>latest</LangVersion>
+    <Authors>SoftwareCraft</Authors>
+    <Company>SoftwareCraft</Company>
+    <Description>SoftwareCraft.Either represents the OOP implementation of a functional concept.</Description>
+    <PackageProjectUrl>https://github.com/zyrconium13/SoftwareCraft.Either</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zyrconium13/SoftwareCraft.Either</RepositoryUrl>
+    <PackageTags>either c-sharp functional-programming dotnet core standard</PackageTags>
+    <PackageReleaseNotes>Added async flavors for Match methods.</PackageReleaseNotes>
+    <AssemblyVersion>2.1.1.0</AssemblyVersion>
+    <FileVersion>2.1.1.0</FileVersion>
+    <Version>2.1.1.0</Version>
+    <SignAssembly>True</SignAssembly>
+    <AssemblyOriginatorKeyFile>D:\OneDrive\Documents\SoftwareCraftKey\SoftwareCraftKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
 
 </Project>
