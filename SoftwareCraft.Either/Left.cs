@@ -54,6 +54,15 @@ public class Left<TLeft, TRight> : Either<TLeft, TRight>
 		return Either.Left<ULeft, URight>(mapLeft(Left));
 	}
 
+	public override async Task<Either<ULeft, URight>> SelectAsync<ULeft, URight>(
+		Func<TLeft, Task<ULeft>> mapLeft, Func<TRight, Task<URight>> mapRight)
+	{
+		if (mapLeft == null) throw new ArgumentNullException(nameof(mapLeft));
+		if (mapRight == null) throw new ArgumentNullException(nameof(mapRight));
+
+		return Either.Left<ULeft, URight>(await mapLeft(Left));
+	}
+
 	public override Either<ULeft, URight> SelectMany<ULeft, URight>(
 		Func<TLeft, Either<ULeft, URight>>  mapLeft,
 		Func<TRight, Either<ULeft, URight>> mapRight)
@@ -62,5 +71,14 @@ public class Left<TLeft, TRight> : Either<TLeft, TRight>
 		if (mapRight == null) throw new ArgumentNullException(nameof(mapRight));
 
 		return mapLeft(Left);
+	}
+
+	public override async Task<Either<ULeft, URight>> SelectManyAsync<ULeft, URight>(
+		Func<TLeft, Task<Either<ULeft, URight>>> mapLeft, Func<TRight, Task<Either<ULeft, URight>>> mapRight)
+	{
+		if (mapLeft == null) throw new ArgumentNullException(nameof(mapLeft));
+		if (mapRight == null) throw new ArgumentNullException(nameof(mapRight));
+
+		return await mapLeft(Left);
 	}
 }

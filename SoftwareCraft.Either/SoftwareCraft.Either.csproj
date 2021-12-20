@@ -12,10 +12,10 @@
     <PackageProjectUrl>https://github.com/zyrconium13/SoftwareCraft.Either</PackageProjectUrl>
     <RepositoryUrl>https://github.com/zyrconium13/SoftwareCraft.Either</RepositoryUrl>
     <PackageTags>either c-sharp functional-programming dotnet core standard</PackageTags>
-    <PackageReleaseNotes>Added async flavors for Match methods.</PackageReleaseNotes>
-    <AssemblyVersion>2.1.1.0</AssemblyVersion>
-    <FileVersion>2.1.1.0</FileVersion>
-    <Version>2.1.1.0</Version>
+    <PackageReleaseNotes>Added async flavors for Select methods.</PackageReleaseNotes>
+    <AssemblyVersion>2.1.1.1</AssemblyVersion>
+    <FileVersion>2.1.1.1</FileVersion>
+    <Version>2.1.1.1</Version>
     <SignAssembly>True</SignAssembly>
     <AssemblyOriginatorKeyFile>D:\OneDrive\Documents\SoftwareCraftKey\SoftwareCraftKey.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
